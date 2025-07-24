@@ -14,15 +14,14 @@
 }
 body{
   font-family: inter-regular;
+  margin:auto 150px;
 }
 /* nav styles */
 nav{
+  margin-top: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 30px;
-  margin-left: 150px;
-  margin-right: 150px;
 }
 .nav-logo{
   height: 82px;
@@ -54,8 +53,6 @@ nav{
 .header-banner{
   display: flex;
   margin-top: 120px;
-  margin-left: 150px;
-  margin-right: 150px;
 }
 .banner-title{
   font-family: noto-bold;
@@ -68,4 +65,46 @@ nav{
 .banner-description{
   font-size: 22px;
   color: #00000050;
+}
+/* Our plants */
+.plant-collection{
+  display: grid;
+  grid-template-columns: repeat(4 , 1fr);
+  gap: 30px 20px;
+}
+.plants-title{
+  font-family: noto-bold;
+  font-size: 50px;
+  text-align: center;
+}
+#our{
+  color: #e95a08;
+}
+.plants-description{
+  text-align: center;
+  margin: auto 276px;
+  margin-bottom: 29px;
+  font-size: 22px;
+  color: #00000050;
+}
+.plant-name{
+  text-align: center;
+  font-weight: 500;
+  font-size: 22px;
+  color: #111111;
+}
+.price{
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  color: #111111;
+}
+.btn{
+  height: 50px;
+  width: 270px;
+  background-color: #e95a08;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
 }
