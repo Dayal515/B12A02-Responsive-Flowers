@@ -1,36 +1,47 @@
 
-.noto-bold{
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+.noto{
   font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
-  font-weight: bold;
   font-style: normal;
   font-variation-settings:
     "width" 100;
 }
-.inter-regular {
+.inter {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
 body{
-  font-family: inter-regular;
-  margin:auto 150px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Noto Serif", serif;
+}
+header{
+  padding: 30px 5%;
 }
 /* nav styles */
 nav{
-  margin-top: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 .nav-logo{
   height: 82px;
-  width: 135px;
+  width: auto;
 }
 .nav-icons{
   display: flex;
   align-items: center;
   gap: 48px;
+  flex-wrap: wrap;
 }
 .nav-icon{
   text-decoration: none;
@@ -52,12 +63,14 @@ nav{
 /* Banner styles */
 .header-banner{
   display: flex;
-  margin-top: 120px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
 }
 .banner-title{
-  font-family: noto-bold;
   font-size: 3.5em;
   line-height: 1.1;
+  margin-bottom: 20px;
   color: #e95a08;
 }
 #always{
@@ -67,78 +80,111 @@ nav{
   font-size: 1.1em;
   color: #00000050;
 }
+main{
+  padding: 40px 5%;
+}
 /* Our plants */
 .plant-collection{
   display: grid;
-  grid-template-columns: repeat(4 , 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
+  justify-content: center;
+}
+.plants{
+  text-align: center;
+  margin-bottom: 60px;
 }
 .plants-title{
-  font-family: noto-bold;
-  font-size: 2.45em;
+  font-size: 2.5em;
   text-align: center;
+  margin-bottom: 16px;
 }
 #our{
   color: #e95a08;
 }
 .plants-description{
-  text-align: center;
-  margin: auto 276px;
-  margin-bottom: 29px;
-  font-size: 22px;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  font-size: 1.45em;
   color: #00000050;
 }
+.plant-img {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
 .plant-name{
-  text-align: center;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 1.5em;
+  margin-bottom: 20px;
   color: #111111;
 }
 .price{
-  text-align: center;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 1.2em;
   color: #111111;
 }
 .btn{
-  height: 50px;
-  width: 100%;
   background-color: #e95a08;
   color: #ffffff;
-  font-weight: 600;
-  font-size: 16px;
+  padding: 26px 50px;
+  font-size: 1em;
+  width: 100%;
   border: none;
+  font-weight: 600;
+}
+.btn:hover{
+  background-color: aqua;
+  color: #000000;
 }
 /* flower-plants-lover section */
 .flower-plants-lover{
   display: flex;
-  margin-top: 210px;
-  justify-content: space-between;
-}
-/* .flower{
-  width: 540px;
-  height: 597px;
-} */
- .plant-title{
-  font-family: noto-bold;
-  font-size: 50px;
- }
- .flower-plants-lover li{
-  font-size: 22px;
-  color: #00000050;
- }
- /* Deal section */
- .latest-deal h3{
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 80px auto;
   text-align: center;
-  font-family: noto-bold;
-  font-size: 50px;
+  position: relative;
+}
+.flower-plants-lover .plants {
+  text-align: left;
+  margin: 0;
+}
+.flower-plants-lover .plant-title {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+}
+.flower{
+  max-width: 450px;
+}
+.flower-plants-lover ul {
+  padding: 0;
+  margin: 0;
+}
+.flower-plants-lover ul li {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  color: #00000050;
+  position: relative;
+  padding-left: 30px;
+}
+ /* Deal section */
+ .latest-deal{
+  text-align: center;
+  margin-bottom: 60px;
+ }
+ .latest-deal h3{
+  font-size: 2.5em;
+  margin-bottom: 10px;
  }
  #latest{
   color: #e95a08;
  }
  .latest-deal p{
-  text-align: center;
-  font-size: 22px;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  font-size: 1.1em;
   color: #00000050;
  }
  /* Offer Section */
@@ -180,6 +226,7 @@ nav{
   font-size: 40px;
   color: #ffffff;
 }
+/* Footer */
 .shop{
   font-weight: 600;
   font-size: 16px;
@@ -188,44 +235,97 @@ nav{
 .subscribe-container{
   background-image: url(assets/news-letter-bg.png);
   background-size: cover;
-  margin-bottom: 30px;
-  padding: 193px 305px;
+  background-position: center;
+  margin-bottom: 50px;
+  padding: 80px 30px;
+  text-align: center;
 }
 .subscribe-container h3{
-  text-align: center;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 2.2em;
   color: #ffffff;
+  margin-bottom: 25px;
 }
 .subscribe{
   display: flex;
   justify-content: center;
-  height: 50px;
-  width: 100%;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 8px;
+}
+.subscribe-input{
+  flex-grow: 1;
+  padding: 12px 20px;
+  border: none;
+  outline: none;
+  font-size: 1em;
+}
+.sub-btn{
+  background-color: #e95a08;
+  color: #ffffff;
+  padding: 12px 25px;
+  font-size: 1em;
+  border-style: none;
+}
+.sub-btn:hover{
+  background-color: aqua;
+  color: #111111;
 }
 /* footer-list */
-.footer-list{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-around;
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* flex-wrap: wrap; */
+  gap: 30px;
+  padding: 40px 5%;
 }
-.footer-list p{
-  font-size: 22px;
+.footer-content p{
+  flex: 1;
+  color: #00000050;
+  min-width: 250px;
+  text-align: left;
+}
+.footer-logo {
+  height: 60px;
+  width: auto;
+  margin-bottom: 15px;
+}
+.footer-about p {
+  font-size: 1.2em;
   color: #00000050;
 }
-.footer-items{
+.footer-links{
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: grid;
-  grid-template-columns: repeat(2 ,1fr);
+  grid-template-columns: repeat(2, 1fr);
+  min-width: 150px;
+  text-align: left;
+}
+.footer-links li{
+  margin-bottom: 10px;
 }
 .footer-item{
   text-decoration: none;
-  list-style: none;
   color: #6b7280;
+  font-size: 0.95em;
 }
 .footer-items li{
   list-style: none;
   gap: 32px auto;
 }
 .footer-icons{
+  display: flex;
   gap: 24px;
+  flex: 1;
+  min-width: 150px;
+  justify-content: flex-end;
+}
+.footer-icon{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
 }
