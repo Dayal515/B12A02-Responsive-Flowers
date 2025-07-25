@@ -49,7 +49,7 @@ nav{
   height: 24px;
   width: 24px;
 }
-/* Baneer styles */
+/* Banner styles */
 .header-banner{
   display: flex;
   margin-top: 120px;
@@ -102,7 +102,7 @@ nav{
 }
 .btn{
   height: 50px;
-  width: 270px;
+  width: 100%;
   background-color: #e95a08;
   color: #ffffff;
   font-weight: 600;
@@ -154,7 +154,7 @@ nav{
 .ana{
   background-image: url(assets/deal-ana.png);
 }
-.zabo{
+.zabo {
   background-image: url(assets/deal-zabo.png);
 }
 .bloom-ana {
@@ -184,4 +184,48 @@ nav{
   font-weight: 600;
   font-size: 16px;
   color: #ffffff;
+}
+.subscribe-container{
+  background-image: url(assets/news-letter-bg.png);
+  background-size: cover;
+  margin-bottom: 30px;
+  padding: 193px 305px;
+}
+.subscribe-container h3{
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  color: #ffffff;
+}
+.subscribe{
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+}
+/* footer-list */
+.footer-list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-around;
+}
+.footer-list p{
+  font-size: 22px;
+  color: #00000050;
+}
+.footer-items{
+  display: grid;
+  grid-template-columns: repeat(2 ,1fr);
+}
+.footer-item{
+  text-decoration: none;
+  list-style: none;
+  color: #6b7280;
+}
+.footer-items li{
+  list-style: none;
+  gap: 32px auto;
+}
+.footer-icons{
+  gap: 24px;
 }
